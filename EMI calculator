@@ -1,0 +1,24 @@
+#include <iostream>
+#include<cmath>
+double emi_calci(double p,double r,double n){
+    double x;
+    r=r/(12*100);
+    n=n*12;
+    x=(p * r * pow(1+r,n))/(pow(1+r,n)-1);
+    return x;
+}
+
+
+
+int main()
+{
+     double PA,RI,N,emi;
+     PA=100000;
+     RI=10.5;
+     N=20;
+     emi=emi_calci(PA,RI,N);
+     std::cout<<"\n Monthly EMI is "<<emi;
+     
+     
+    return 0;
+}
